@@ -23,8 +23,8 @@ def transliter(message:telebot.types.Message):
         else:
             he_result += letter
             ar_result += letter
-    he_result = he_result.replace("s²", "שׁ").replace("s¹", "ס")
-    ar_result = ar_result.replace("s²", "ش").replace("s¹", "س")
+    he_result = he_result.replace("s²", "שׁ").replace("s¹", "ס").replace("s³", "ס")
+    ar_result = ar_result.replace("s²", "ش").replace("s¹", "س").replace("s³", "س")
     bot.reply_to(
         message=message, 
         text=he_result)
